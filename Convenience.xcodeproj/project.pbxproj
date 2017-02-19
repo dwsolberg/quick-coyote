@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A0244CE1E5A4C9F00AD2BA3 /* String+Substrings_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0244CD1E5A4C9F00AD2BA3 /* String+Substrings_Test.swift */; };
 		5A319C7F1E5A3EDD004E5AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319C7E1E5A3EDD004E5AAD /* AppDelegate.swift */; };
 		5A319C811E5A3EDD004E5AAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319C801E5A3EDD004E5AAD /* ViewController.swift */; };
 		5A319C841E5A3EDD004E5AAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A319C821E5A3EDD004E5AAD /* Main.storyboard */; };
@@ -14,6 +15,19 @@
 		5A319C891E5A3EDD004E5AAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A319C871E5A3EDD004E5AAD /* LaunchScreen.storyboard */; };
 		5A319C941E5A3EDD004E5AAD /* ConvenienceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319C931E5A3EDD004E5AAD /* ConvenienceTests.swift */; };
 		5A319C9F1E5A3EDD004E5AAD /* ConvenienceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319C9E1E5A3EDD004E5AAD /* ConvenienceUITests.swift */; };
+		5A319CAE1E5A3F4C004E5AAD /* UINib-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CAD1E5A3F4C004E5AAD /* UINib-Extensions.swift */; };
+		5A319CB01E5A3F6B004E5AAD /* UIImage+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CAF1E5A3F6B004E5AAD /* UIImage+Tint.swift */; };
+		5A319CB21E5A401D004E5AAD /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CB11E5A401D004E5AAD /* UIViewController+Alert.swift */; };
+		5A319CB41E5A4109004E5AAD /* Double+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CB31E5A4109004E5AAD /* Double+Date.swift */; };
+		5A319CB61E5A41DB004E5AAD /* String+Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CB51E5A41DB004E5AAD /* String+Numbers.swift */; };
+		5A319CB81E5A425D004E5AAD /* String+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CB71E5A425D004E5AAD /* String+Colors.swift */; };
+		5A319CBA1E5A4484004E5AAD /* NSLayoutConstraint-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CB91E5A4484004E5AAD /* NSLayoutConstraint-Extensions.swift */; };
+		5A319CBC1E5A44C3004E5AAD /* Numbers+Rounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CBB1E5A44C3004E5AAD /* Numbers+Rounding.swift */; };
+		5A319CC01E5A4590004E5AAD /* String+Subscripting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CBF1E5A4590004E5AAD /* String+Subscripting.swift */; };
+		5A319CC21E5A4648004E5AAD /* String+Substrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CC11E5A4648004E5AAD /* String+Substrings.swift */; };
+		5A319CC51E5A4800004E5AAD /* CellTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CC41E5A4800004E5AAD /* CellTracking.swift */; };
+		5A319CC81E5A48E5004E5AAD /* ReuseableCollectionCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CC61E5A48E5004E5AAD /* ReuseableCollectionCells.swift */; };
+		5A319CC91E5A48E5004E5AAD /* ReuseableTableCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CC71E5A48E5004E5AAD /* ReuseableTableCells.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A0244CD1E5A4C9F00AD2BA3 /* String+Substrings_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Substrings_Test.swift"; sourceTree = "<group>"; };
 		5A319C7B1E5A3EDD004E5AAD /* Convenience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Convenience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A319C7E1E5A3EDD004E5AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A319C801E5A3EDD004E5AAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +62,19 @@
 		5A319C9A1E5A3EDD004E5AAD /* ConvenienceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvenienceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A319C9E1E5A3EDD004E5AAD /* ConvenienceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenienceUITests.swift; sourceTree = "<group>"; };
 		5A319CA01E5A3EDD004E5AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A319CAD1E5A3F4C004E5AAD /* UINib-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINib-Extensions.swift"; sourceTree = "<group>"; };
+		5A319CAF1E5A3F6B004E5AAD /* UIImage+Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Tint.swift"; sourceTree = "<group>"; };
+		5A319CB11E5A401D004E5AAD /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		5A319CB31E5A4109004E5AAD /* Double+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Date.swift"; sourceTree = "<group>"; };
+		5A319CB51E5A41DB004E5AAD /* String+Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Numbers.swift"; sourceTree = "<group>"; };
+		5A319CB71E5A425D004E5AAD /* String+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Colors.swift"; sourceTree = "<group>"; };
+		5A319CB91E5A4484004E5AAD /* NSLayoutConstraint-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint-Extensions.swift"; sourceTree = "<group>"; };
+		5A319CBB1E5A44C3004E5AAD /* Numbers+Rounding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Numbers+Rounding.swift"; sourceTree = "<group>"; };
+		5A319CBF1E5A4590004E5AAD /* String+Subscripting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Subscripting.swift"; sourceTree = "<group>"; };
+		5A319CC11E5A4648004E5AAD /* String+Substrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Substrings.swift"; sourceTree = "<group>"; };
+		5A319CC41E5A4800004E5AAD /* CellTracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellTracking.swift; sourceTree = "<group>"; };
+		5A319CC61E5A48E5004E5AAD /* ReuseableCollectionCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseableCollectionCells.swift; sourceTree = "<group>"; };
+		5A319CC71E5A48E5004E5AAD /* ReuseableTableCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseableTableCells.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +128,8 @@
 				5A319C7E1E5A3EDD004E5AAD /* AppDelegate.swift */,
 				5A319C801E5A3EDD004E5AAD /* ViewController.swift */,
 				5A319C821E5A3EDD004E5AAD /* Main.storyboard */,
+				5A319CC31E5A4725004E5AAD /* ReuseableCells */,
+				5A319CAC1E5A3F3F004E5AAD /* Extensions */,
 				5A319C851E5A3EDD004E5AAD /* Assets.xcassets */,
 				5A319C871E5A3EDD004E5AAD /* LaunchScreen.storyboard */,
 				5A319C8A1E5A3EDD004E5AAD /* Info.plist */,
@@ -111,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				5A319C931E5A3EDD004E5AAD /* ConvenienceTests.swift */,
+				5A0244CD1E5A4C9F00AD2BA3 /* String+Substrings_Test.swift */,
 				5A319C951E5A3EDD004E5AAD /* Info.plist */,
 			);
 			path = ConvenienceTests;
@@ -123,6 +154,33 @@
 				5A319CA01E5A3EDD004E5AAD /* Info.plist */,
 			);
 			path = ConvenienceUITests;
+			sourceTree = "<group>";
+		};
+		5A319CAC1E5A3F3F004E5AAD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5A319CC11E5A4648004E5AAD /* String+Substrings.swift */,
+				5A319CBB1E5A44C3004E5AAD /* Numbers+Rounding.swift */,
+				5A319CB91E5A4484004E5AAD /* NSLayoutConstraint-Extensions.swift */,
+				5A319CB71E5A425D004E5AAD /* String+Colors.swift */,
+				5A319CB51E5A41DB004E5AAD /* String+Numbers.swift */,
+				5A319CB31E5A4109004E5AAD /* Double+Date.swift */,
+				5A319CB11E5A401D004E5AAD /* UIViewController+Alert.swift */,
+				5A319CAF1E5A3F6B004E5AAD /* UIImage+Tint.swift */,
+				5A319CAD1E5A3F4C004E5AAD /* UINib-Extensions.swift */,
+				5A319CBF1E5A4590004E5AAD /* String+Subscripting.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5A319CC31E5A4725004E5AAD /* ReuseableCells */ = {
+			isa = PBXGroup;
+			children = (
+				5A319CC61E5A48E5004E5AAD /* ReuseableCollectionCells.swift */,
+				5A319CC71E5A48E5004E5AAD /* ReuseableTableCells.swift */,
+				5A319CC41E5A4800004E5AAD /* CellTracking.swift */,
+			);
+			path = ReuseableCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +320,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A319CC21E5A4648004E5AAD /* String+Substrings.swift in Sources */,
+				5A319CB21E5A401D004E5AAD /* UIViewController+Alert.swift in Sources */,
+				5A319CB01E5A3F6B004E5AAD /* UIImage+Tint.swift in Sources */,
+				5A319CB81E5A425D004E5AAD /* String+Colors.swift in Sources */,
+				5A319CBA1E5A4484004E5AAD /* NSLayoutConstraint-Extensions.swift in Sources */,
+				5A319CC91E5A48E5004E5AAD /* ReuseableTableCells.swift in Sources */,
+				5A319CBC1E5A44C3004E5AAD /* Numbers+Rounding.swift in Sources */,
+				5A319CC01E5A4590004E5AAD /* String+Subscripting.swift in Sources */,
+				5A319CAE1E5A3F4C004E5AAD /* UINib-Extensions.swift in Sources */,
 				5A319C811E5A3EDD004E5AAD /* ViewController.swift in Sources */,
+				5A319CB41E5A4109004E5AAD /* Double+Date.swift in Sources */,
 				5A319C7F1E5A3EDD004E5AAD /* AppDelegate.swift in Sources */,
+				5A319CC51E5A4800004E5AAD /* CellTracking.swift in Sources */,
+				5A319CC81E5A48E5004E5AAD /* ReuseableCollectionCells.swift in Sources */,
+				5A319CB61E5A41DB004E5AAD /* String+Numbers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A0244CE1E5A4C9F00AD2BA3 /* String+Substrings_Test.swift in Sources */,
 				5A319C941E5A3EDD004E5AAD /* ConvenienceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +586,7 @@
 				5A319CA51E5A3EDD004E5AAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A319CA61E5A3EDD004E5AAD /* Build configuration list for PBXNativeTarget "ConvenienceTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +595,7 @@
 				5A319CA81E5A3EDD004E5AAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A319CA91E5A3EDD004E5AAD /* Build configuration list for PBXNativeTarget "ConvenienceUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +604,7 @@
 				5A319CAB1E5A3EDD004E5AAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
