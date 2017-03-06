@@ -35,6 +35,14 @@ public extension NibReusable where Self: UITableViewHeaderFooterView {
     }
 }
 
+fileprivate extension UIView {
+    fileprivate static var baseClassName: String! {
+        let namespacedClassName = NSStringFromClass(self) as NSString
+        let baseClassName = namespacedClassName.components(separatedBy: ".").last
+        return baseClassName!
+    }
+}
+
 // MARK: - UITableView support for NibReusable -- Only works with Nib-based cells right now.
 
 public extension UITableView {

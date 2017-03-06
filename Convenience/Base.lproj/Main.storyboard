@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Alert TestVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AlertTestVC" customModule="Convenience" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,91 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alert Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVp-IK-QCi">
+                                <rect key="frame" x="16" y="34" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dismiss Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TBV-Lo-56i">
+                                <rect key="frame" x="16" y="88" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Accept Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cVz-rt-U5s">
+                                <rect key="frame" x="16" y="147" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cancel Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZ0-Aq-ovX">
+                                <rect key="frame" x="16" y="185" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Sn-VO-VPj">
+                                <rect key="frame" x="16" y="274" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="eIV-jj-hGo"/>
+                                </constraints>
+                                <state key="normal" title="Make Alert"/>
+                                <connections>
+                                    <action selector="userPressedMakeAlertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KJb-Z2-h5b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgK-L8-bWN">
+                                <rect key="frame" x="164" y="274" width="195" height="30"/>
+                                <state key="normal" title="Make Action Alert"/>
+                                <connections>
+                                    <action selector="userPressedMakeActionAlertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SUm-8x-nbR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPm-OK-cmm">
+                                <rect key="frame" x="16" y="230" width="343" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="JKV-h9-sEN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TBV-Lo-56i" firstAttribute="top" secondItem="QVp-IK-QCi" secondAttribute="bottom" constant="24" id="1aS-Rl-w5H"/>
+                            <constraint firstItem="5Sn-VO-VPj" firstAttribute="baseline" secondItem="YgK-L8-bWN" secondAttribute="baseline" id="1kU-cd-vUg"/>
+                            <constraint firstItem="TBV-Lo-56i" firstAttribute="leading" secondItem="cVz-rt-U5s" secondAttribute="leading" id="A5w-G1-nHY"/>
+                            <constraint firstItem="BPm-OK-cmm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ArD-aS-J8M"/>
+                            <constraint firstItem="BPm-OK-cmm" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Cgk-Ei-p2b"/>
+                            <constraint firstItem="YgK-L8-bWN" firstAttribute="top" secondItem="BPm-OK-cmm" secondAttribute="bottom" constant="13" id="Gfj-TU-Yny"/>
+                            <constraint firstItem="AZ0-Aq-ovX" firstAttribute="top" secondItem="cVz-rt-U5s" secondAttribute="bottom" constant="8" symbolic="YES" id="Hhb-jP-Hgt"/>
+                            <constraint firstItem="QVp-IK-QCi" firstAttribute="leading" secondItem="TBV-Lo-56i" secondAttribute="leading" id="Hua-zC-ylQ"/>
+                            <constraint firstItem="QVp-IK-QCi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LND-Mm-Fjx"/>
+                            <constraint firstItem="QVp-IK-QCi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="OIL-UI-eFC"/>
+                            <constraint firstItem="BPm-OK-cmm" firstAttribute="top" secondItem="AZ0-Aq-ovX" secondAttribute="bottom" constant="15" id="OhS-0I-Zp0"/>
+                            <constraint firstItem="cVz-rt-U5s" firstAttribute="top" secondItem="TBV-Lo-56i" secondAttribute="bottom" constant="29" id="gOj-3R-zLT"/>
+                            <constraint firstItem="cVz-rt-U5s" firstAttribute="leading" secondItem="AZ0-Aq-ovX" secondAttribute="leading" id="ihl-6Q-InH"/>
+                            <constraint firstItem="YgK-L8-bWN" firstAttribute="leading" secondItem="5Sn-VO-VPj" secondAttribute="trailing" constant="8" symbolic="YES" id="rUg-3D-jN3"/>
+                            <constraint firstItem="cVz-rt-U5s" firstAttribute="trailing" secondItem="AZ0-Aq-ovX" secondAttribute="trailing" id="rWk-32-xnz"/>
+                            <constraint firstItem="QVp-IK-QCi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="rp2-8p-JvH"/>
+                            <constraint firstItem="QVp-IK-QCi" firstAttribute="trailing" secondItem="TBV-Lo-56i" secondAttribute="trailing" id="wmX-Xz-Rrc"/>
+                            <constraint firstItem="TBV-Lo-56i" firstAttribute="trailing" secondItem="cVz-rt-U5s" secondAttribute="trailing" id="ztw-93-JYK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelResult" destination="BPm-OK-cmm" id="YEl-qf-UFE"/>
+                        <outlet property="textFieldAcceptButtonTitle" destination="cVz-rt-U5s" id="bxN-X9-K2Y"/>
+                        <outlet property="textFieldAlertTitle" destination="QVp-IK-QCi" id="BHH-kf-jCN"/>
+                        <outlet property="textFieldCancelButtonTitle" destination="AZ0-Aq-ovX" id="9Ih-tq-ujm"/>
+                        <outlet property="textFieldDismissButtonTitle" destination="TBV-Lo-56i" id="YZ4-rx-UvZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>

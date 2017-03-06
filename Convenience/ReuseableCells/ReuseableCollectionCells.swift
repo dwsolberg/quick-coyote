@@ -15,6 +15,12 @@ public extension NibReusable where Self: UICollectionViewCell {
     static var reuseIdentifier: String {
         return NSStringFromClass(self)
     }
+
+    fileprivate static var baseClassName: String! {
+        let namespacedClassName = NSStringFromClass(self) as NSString
+        let baseClassName = namespacedClassName.components(separatedBy: ".").last
+        return baseClassName!
+    }
 }
 
 public extension UICollectionView {

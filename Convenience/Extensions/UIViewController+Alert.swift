@@ -6,30 +6,21 @@
 
 import UIKit
 
-typealias ButtonPressAction = () -> Void
+typealias AlertButtonPressAction = () -> Void
 
 /// Convenience Methods to display an alert without all the boilerplate.
 extension UIViewController
 {
-    func presentAlertWithTitle(_ title: String, message: String, dismissTitle: String = "Dismiss", completion: @escaping ButtonPressAction = {}){
+    func presentAlert(withTitle title: String, message: String, dismissTitle: String = "Dismiss", dismissAction: @escaping AlertButtonPressAction = {} ) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let dismissAction = UIAlertAction(title: title, style: .cancel) { (action) in
-            completion()
+        let dismissButtonAction = UIAlertAction(title: dismissTitle, style: .cancel) { (action) in
+            dismissAction()
         }
-        alert.addAction(dismissAction)
+        alert.addAction(dismissButtonAction)
         self.present(alert, animated: true, completion: nil)
     }
     
-    func presentAlertWithTitle(_ title: String, message: String, cancelTitle: String, cancelAction: @escaping ButtonPressAction) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let dismissAction = UIAlertAction(title: cancelTitle, style: .cancel) { (action) in
-            cancelAction()
-        }
-        alert.addAction(dismissAction)
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func presentAlertWithTitle(_ title: String, message: String, acceptTitle: String, acceptAction: @escaping ButtonPressAction, cancelTitle: String, cancelAction: @escaping ButtonPressAction)
+    func presentAlert(withTitle title: String, message: String, acceptTitle: String, acceptAction: @escaping AlertButtonPressAction = {}, cancelTitle: String, cancelAction: @escaping AlertButtonPressAction = {})
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         

@@ -8,9 +8,10 @@ import Foundation
 
 extension String {
 
-    var intValue: Int? {
-        let trimmed = self.numbersAndDecimalOnly
-        return Int(trimmed)
+    var intValueRounded: Int? {
+        guard let doubled = self.doubleValue else { return nil }
+        let rounded = round(doubled)
+        return Int(rounded)
     }
 
     var doubleValue: Double? {
@@ -27,6 +28,7 @@ extension String {
         }
     }
 
+    // TODO: Add locale because some places uses commas for decimals.
     var numbersAndDecimalOnly: String {
         let numberCharacterSet = CharacterSet(charactersIn: "1234567890.")
         let removeSet = numberCharacterSet.inverted

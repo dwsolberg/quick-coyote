@@ -1,8 +1,6 @@
 //
 //  String+Substrings_Test.swift
-//  Convenience
 //
-//  Created by David Solberg on 2/19/17.
 //  Copyright © 2017 David Solberg. All rights reserved.
 //
 
@@ -54,14 +52,14 @@ class String_Substrings_Test: XCTestCase {
     }
 
     func testUnicodeSingleCharacter() {
-        //          01234------567
+        //          0123-------4567
         let base = "Pok\u{00E9}mon"
         let result = base.substring(from: 0, to: 5)
         XCTAssertTrue(result == "Pokém", "Should correctly treat unicode characters.")
     }
 
     func testUnicodeComboCharacter() {
-        //          01234--------------567
+        //          0123---------------4567
         let base = "Pok\u{0065}\u{0301}mon"
         let result = base.substring(from: 0, to: 5)
         XCTAssertTrue(result == "Pokém", "Should correctly treat unicode characters.")
@@ -76,12 +74,13 @@ class String_Substrings_Test: XCTestCase {
 
     func testComboString() {
         //          012345678901234
-        let base = "Resumé has an odd character"
+        let base = "Resumé has an combo character"
         let result = base.substring(to: 6)
         XCTAssertTrue(result == "Resumé", "The string should end immediately before index 6.")
     }
 
     func testRegularEmoji() {
+        //          0  1 2 3
         let base = "⛄️🚦🎁🐝"
         let result = base.substring(from: 1, to: 3)
         XCTAssertTrue(result == "🚦🎁", "The string start at emoji at index 1 and end immediately before 3.")
