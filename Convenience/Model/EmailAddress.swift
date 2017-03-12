@@ -7,7 +7,8 @@
 import UIKit
 import MessageUI
 
-// Hold an email address with a display name and provides a way to send an email.
+typealias EmailAddressCompletion = (_ result: MFMailComposeResult?) -> Void
+
 class EmailAddress: NSObject, MFMailComposeViewControllerDelegate {
 
     let address: String
@@ -23,10 +24,10 @@ class EmailAddress: NSObject, MFMailComposeViewControllerDelegate {
         self.address = unvalidated
         self.displayName = displayName
         super.init()
-        guard unvalidated.isProbablyEmailAddress else { return nil }
+        guard EmailAddress.validate(unvalidated) else { return nil }
     }
 
-    func sendFromViewController(_ vc: UIViewController, subject: String? = nil, message: String? = nil, isHtml: Bool = false) -> Bool {
+    func sendFromViewController(_ vc: UIViewController, subject: String? = nil, message: String? = nil, isHtml: Bool = false, completion: EmailAddressCompletion? = nil) {
 
         guard MFMailComposeViewController.canSendMail() == true else {
             if #available(iOS 10.0, *) {
@@ -34,7 +35,8 @@ class EmailAddress: NSObject, MFMailComposeViewControllerDelegate {
             } else {
                 UIApplication.shared.openURL(URL(string: "mailto:")!)
             }
-            return false
+            completion?(nil)
+            return
         }
 
         let mailer = MFMailComposeViewController()
@@ -45,34 +47,36 @@ class EmailAddress: NSObject, MFMailComposeViewControllerDelegate {
 
         mailer.mailComposeDelegate = self
         EmailAddress.retainedInstance = self
-        presentingVC = vc
+        self.presentingVC = vc
+        self.completion = completion
 
         vc.present(mailer, animated: true) { () -> Void in  }
-        return true
+    }
+
+    static func validate(_ potentialAddress: String) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,20}"
+        return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: potentialAddress)
     }
 
     // MARK: - Internal
 
     // We're holding onto these variables because the user may not always want to store them in a variable. This allows us to keep
     private weak var presentingVC: UIViewController?
+    private var completion: EmailAddressCompletion?
     private static var retainedInstance: EmailAddress?
 
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Swift.Error?) {
         if let presentingVC = self.presentingVC {
             presentingVC.dismiss(animated: true, completion: { [weak self] () -> Void in
-                self?.presentingVC = nil
-                EmailAddress.retainedInstance = nil
+                defer { EmailAddress.retainedInstance = nil }
+                guard let strong = self else { return }
+                strong.presentingVC = nil
+                strong.completion?(result)
+                strong.completion = nil
             })
         } else {
             EmailAddress.retainedInstance = nil
+            completion?(result)
         }
-
-    }
-}
-
-extension String {
-    var isProbablyEmailAddress: Bool {
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,20}"
-        return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: self)
     }
 }

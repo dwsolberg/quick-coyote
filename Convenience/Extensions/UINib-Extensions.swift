@@ -6,12 +6,11 @@
 
 import UIKit
 
-/// Any xib file can conform to this protocol *if* the nib file has the same name as the view's class. Just add it to the end of any class, eg. MyCell: UITableViewCell, NibCreatable
+/// Any xib file can conform to this protocol *if* the nib file has the same name as the view's class. Just add it to the end of any class, eg. MyPictureView: UIView, NibCreatable
 protocol NibCreatable {
     associatedtype Instance
     static func instanceFromNib() -> Instance?
 }
-
 
 extension NibCreatable where Self: UIView {
 

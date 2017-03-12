@@ -71,7 +71,7 @@ extension Array: CustomPlaygroundQuickLookable {
     }
 }
 
-/// If you want to view QuickLook objects in Xcode, you need to box the object first. This is because Dictionary and Array cannot have QuickLook objects added to them. In the playground, QuickLook works because we can conform to the CustomPlaygroundQuickLookable protocol.
+/// If you want to view QuickLook objects in Xcode, you need to box the object first. This is because Dictionary and Array cannot have QuickLook objects added to them. In the playground, QuickLook works because they can conform to the CustomPlaygroundQuickLookable protocol.
 @objc class JSONBox: NSObject {
     private let JSON: Any
 

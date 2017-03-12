@@ -6,20 +6,15 @@
 
 import UIKit
 
-
 public extension NibReusable where Self: UICollectionViewCell {
     static var nib: UINib {
-        return UINib(nibName: self.baseClassName, bundle: Bundle(for: self))
+        let namespacedClassName = NSStringFromClass(self) as NSString
+        let baseClassName = namespacedClassName.components(separatedBy: ".").last!
+        return UINib(nibName: baseClassName, bundle: Bundle(for: self))
     }
     
     static var reuseIdentifier: String {
         return NSStringFromClass(self)
-    }
-
-    fileprivate static var baseClassName: String! {
-        let namespacedClassName = NSStringFromClass(self) as NSString
-        let baseClassName = namespacedClassName.components(separatedBy: ".").last
-        return baseClassName!
     }
 }
 

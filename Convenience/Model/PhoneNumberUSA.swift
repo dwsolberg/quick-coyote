@@ -1,5 +1,5 @@
 //
-//  PhoneNumber.swift
+//  PhoneNumberUSA.swift
 //
 //  Copyright © 2017 David Solberg. All rights reserved.
 //
@@ -8,20 +8,20 @@ import UIKit
 
 /// This class hold a U.S.-formatted phone number 1-000-000-0000 and provides a method to call it.
 // Requires a reference type (class) because it has to hold a webview for calling the number.
-class PhoneNumber {
+class PhoneNumberUSA {
     
     let number: String
     fileprivate static var webView = UIWebView()
 
     init?(source unvalidated: String?) {
         guard let unvalidated = unvalidated else { return nil }
-        guard let validNum = PhoneNumber.number(fromString: unvalidated) else { return nil }
+        guard let validNum = PhoneNumberUSA.validatedNumber(unvalidated) else { return nil }
         number = validNum
         guard let _ = components else { return nil }
     }
 
     /// Check whether the phone number is valid which means that it contains either 10 or 11 digits (11 includes the 1 before the number).
-    static func number(fromString inputString: String) -> String? {
+    static func validatedNumber(_ inputString: String) -> String? {
 
         let removeSet = CharacterSet(charactersIn: "1234567890").inverted
         let numberArray = inputString.components(separatedBy: removeSet)
@@ -58,7 +58,7 @@ class PhoneNumber {
     func call() -> Bool {
         guard let phoneUrl = URL(string: "tel:" + number) else { return false }
         guard UIApplication.shared.canOpenURL(phoneUrl) == true else { return false }
-        PhoneNumber.webView.loadRequest(URLRequest(url: phoneUrl))
+        PhoneNumberUSA.webView.loadRequest(URLRequest(url: phoneUrl))
         return true
     }
 

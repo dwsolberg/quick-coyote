@@ -30,9 +30,13 @@
 		5A319CC91E5A48E5004E5AAD /* ReuseableTableCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CC71E5A48E5004E5AAD /* ReuseableTableCells.swift */; };
 		5A5776A71E5A6F1A00DEBD54 /* Numbers_Rounding_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5776A61E5A6F1A00DEBD54 /* Numbers_Rounding_Test.swift */; };
 		5A5776A91E5B544100DEBD54 /* String_Color_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5776A81E5B544100DEBD54 /* String_Color_Test.swift */; };
-		5A5776AC1E5B607D00DEBD54 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5776AB1E5B607D00DEBD54 /* PhoneNumber.swift */; };
+		5A5776AC1E5B607D00DEBD54 /* PhoneNumberUSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5776AB1E5B607D00DEBD54 /* PhoneNumberUSA.swift */; };
 		5A5776AE1E5B616400DEBD54 /* EmailAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5776AD1E5B616400DEBD54 /* EmailAddress.swift */; };
 		5A6DB65F1E6206B8009DCB97 /* JsonFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6DB65E1E6206B8009DCB97 /* JsonFormatting.swift */; };
+		5AA32A271E6E3DEC00614B11 /* SampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA32A261E6E3DEC00614B11 /* SampleTableViewController.swift */; };
+		5AA32A2A1E6E3E0600614B11 /* SampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA32A281E6E3E0600614B11 /* SampleTableViewCell.swift */; };
+		5AA32A2B1E6E3E0600614B11 /* SampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA32A291E6E3E0600614B11 /* SampleTableViewCell.xib */; };
+		5AA32A2D1E6E446B00614B11 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA32A2C1E6E446B00614B11 /* SampleModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,9 +86,13 @@
 		5A319CC71E5A48E5004E5AAD /* ReuseableTableCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseableTableCells.swift; sourceTree = "<group>"; };
 		5A5776A61E5A6F1A00DEBD54 /* Numbers_Rounding_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numbers_Rounding_Test.swift; sourceTree = "<group>"; };
 		5A5776A81E5B544100DEBD54 /* String_Color_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String_Color_Test.swift; sourceTree = "<group>"; };
-		5A5776AB1E5B607D00DEBD54 /* PhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
+		5A5776AB1E5B607D00DEBD54 /* PhoneNumberUSA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberUSA.swift; sourceTree = "<group>"; };
 		5A5776AD1E5B616400DEBD54 /* EmailAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailAddress.swift; sourceTree = "<group>"; };
 		5A6DB65E1E6206B8009DCB97 /* JsonFormatting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFormatting.swift; sourceTree = "<group>"; };
+		5AA32A261E6E3DEC00614B11 /* SampleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleTableViewController.swift; sourceTree = "<group>"; };
+		5AA32A281E6E3E0600614B11 /* SampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleTableViewCell.swift; sourceTree = "<group>"; };
+		5AA32A291E6E3E0600614B11 /* SampleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleTableViewCell.xib; sourceTree = "<group>"; };
+		5AA32A2C1E6E446B00614B11 /* SampleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +149,7 @@
 				5A319CC31E5A4725004E5AAD /* ReuseableCells */,
 				5A5776AA1E5B607500DEBD54 /* Model */,
 				5A319CAC1E5A3F3F004E5AAD /* Extensions */,
+				5A93BDBB1E6DCF1500A1AEA5 /* SampleApp */,
 				5A319C851E5A3EDD004E5AAD /* Assets.xcassets */,
 				5A319C871E5A3EDD004E5AAD /* LaunchScreen.storyboard */,
 				5A319C8A1E5A3EDD004E5AAD /* Info.plist */,
@@ -201,9 +210,36 @@
 			isa = PBXGroup;
 			children = (
 				5A5776AD1E5B616400DEBD54 /* EmailAddress.swift */,
-				5A5776AB1E5B607D00DEBD54 /* PhoneNumber.swift */,
+				5A5776AB1E5B607D00DEBD54 /* PhoneNumberUSA.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5A93BDBB1E6DCF1500A1AEA5 /* SampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				5A93BDBC1E6DCF1500A1AEA5 /* ViewControllers */,
+				5A93BDBD1E6DCF1500A1AEA5 /* Views */,
+				5AA32A2C1E6E446B00614B11 /* SampleModel.swift */,
+			);
+			path = SampleApp;
+			sourceTree = "<group>";
+		};
+		5A93BDBC1E6DCF1500A1AEA5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5AA32A261E6E3DEC00614B11 /* SampleTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5A93BDBD1E6DCF1500A1AEA5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AA32A281E6E3E0600614B11 /* SampleTableViewCell.swift */,
+				5AA32A291E6E3E0600614B11 /* SampleTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A319C891E5A3EDD004E5AAD /* LaunchScreen.storyboard in Resources */,
+				5AA32A2B1E6E3E0600614B11 /* SampleTableViewCell.xib in Resources */,
 				5A319C861E5A3EDD004E5AAD /* Assets.xcassets in Resources */,
 				5A319C841E5A3EDD004E5AAD /* Main.storyboard in Resources */,
 			);
@@ -351,8 +388,10 @@
 				5A319CC91E5A48E5004E5AAD /* ReuseableTableCells.swift in Sources */,
 				5A319CBC1E5A44C3004E5AAD /* Numbers+Rounding.swift in Sources */,
 				5A319CAE1E5A3F4C004E5AAD /* UINib-Extensions.swift in Sources */,
-				5A5776AC1E5B607D00DEBD54 /* PhoneNumber.swift in Sources */,
+				5A5776AC1E5B607D00DEBD54 /* PhoneNumberUSA.swift in Sources */,
 				5A319C811E5A3EDD004E5AAD /* AlertTestVC.swift in Sources */,
+				5AA32A2A1E6E3E0600614B11 /* SampleTableViewCell.swift in Sources */,
+				5AA32A2D1E6E446B00614B11 /* SampleModel.swift in Sources */,
 				5A319CB41E5A4109004E5AAD /* Double+Date.swift in Sources */,
 				5A6DB65F1E6206B8009DCB97 /* JsonFormatting.swift in Sources */,
 				5A5776AE1E5B616400DEBD54 /* EmailAddress.swift in Sources */,
@@ -360,6 +399,7 @@
 				5A319CC51E5A4800004E5AAD /* CellTracking.swift in Sources */,
 				5A319CC81E5A48E5004E5AAD /* ReuseableCollectionCells.swift in Sources */,
 				5A319CB61E5A41DB004E5AAD /* String+Numbers.swift in Sources */,
+				5AA32A271E6E3DEC00614B11 /* SampleTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

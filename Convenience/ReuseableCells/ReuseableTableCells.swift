@@ -10,6 +10,8 @@ import UIKit
 
 /// Code based off of: https://github.com/AliSoftware/Reusable
 
+/// TO conform to this protocol, just add it to the end of your table view cell class.
+/// Please do **NOT** add a reuse identifier to the nib. Doing so may interfere with the automatic reuse identifier supplied.
 public protocol NibReusable  {
     static var nib: UINib { get }
     static var reuseIdentifier: String { get }
@@ -17,7 +19,9 @@ public protocol NibReusable  {
 
 public extension NibReusable where Self: UITableViewCell {
     static var nib: UINib {
-        return UINib(nibName: self.baseClassName, bundle: Bundle(for: self))
+        let namespacedClassName = NSStringFromClass(self) as NSString
+        let baseClassName = namespacedClassName.components(separatedBy: ".").last!
+        return UINib(nibName: baseClassName, bundle: Bundle(for: self))
     }
     
     static var reuseIdentifier: String {
@@ -27,19 +31,13 @@ public extension NibReusable where Self: UITableViewCell {
 
 public extension NibReusable where Self: UITableViewHeaderFooterView {
     static var nib: UINib {
-        return UINib(nibName: self.baseClassName, bundle: Bundle(for: self))
+        let namespacedClassName = NSStringFromClass(self) as NSString
+        let baseClassName = namespacedClassName.components(separatedBy: ".").last!
+        return UINib(nibName: baseClassName, bundle: Bundle(for: self))
     }
     
     static var reuseIdentifier: String {
         return NSStringFromClass(self)
-    }
-}
-
-fileprivate extension UIView {
-    fileprivate static var baseClassName: String! {
-        let namespacedClassName = NSStringFromClass(self) as NSString
-        let baseClassName = namespacedClassName.components(separatedBy: ".").last
-        return baseClassName!
     }
 }
 
@@ -63,7 +61,7 @@ public extension UITableView {
         
         guard let cell = self.dequeueReusableCell(withIdentifier: cellType.reuseIdentifier, for: indexPath) as? T else {
             fatalError(
-                "Failed to dequeue a cell with identifier \(cellType.reuseIdentifier) matching type \(cellType.self). "
+                "Failed to dequeue a cell with identifier \(cellType.reuseIdentifier) matching type \(cellType.self)."
                     + "Check that the reuseIdentifier is set properly (nil or actual name) in nib."
             )
         }
