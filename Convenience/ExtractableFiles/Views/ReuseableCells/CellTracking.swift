@@ -1,7 +1,7 @@
 //
 //  CellTracking.swift
 //
-//  Created by David Solberg on 2/9/17.
+//  Created by David Solberg
 //
 
 import UIKit

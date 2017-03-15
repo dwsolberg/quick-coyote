@@ -1,8 +1,5 @@
 //
 //  JsonFormatting.swift
-//  Convenience
-//
-//  Created by David Solberg on 2/25/17.
 //  Copyright © 2017 David Solberg. All rights reserved.
 //
 
